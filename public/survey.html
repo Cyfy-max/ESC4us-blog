@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusher POLL</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" integrity="sha512-lmJhHTutaPnVBnfnZkZt2q0GqZjTPLERTGjPWnxBl0H6gG2tm9vsfOSbFLGTPbKBgOdLHD0+4Ryu1sXh5nA+Gw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <div class="container">
+        <h1> VOTE</h1>
+        <p>Vote for your favorite country</p>
+        <form id="vote-form">
+            <p>
+                <input type="radio" name="os" id="italy" value="Italy">
+                <label for="italy">Italy</label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="france" value="France">
+                <label for="france">France</label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="switzerland" value="Switzerland">
+                <label for="switzerland">Switzerland</label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="iceland" value="Iceland">
+                <label for="iceland">Iceland </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="ukraine" value="Ukraine">
+                <label for="ukraine">Ukraine </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="finland" value="Finland">
+                <label for="finland">Finland </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="lithuania" value="Lithuania">
+                <label for="lithuania">Lithuania </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="malta" value="Malta">
+                <label for="malta">Malta </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="russia" value="Russia">
+                <label for="russia">Russia </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="moldova" value="Moldova">
+                <label for="moldava">Moldova </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="greece" value="Greece">
+                <label for="greece">Greece </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="bulgaria" value="Bulgaria">
+                <label for="bulgaria">Bulgaria </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="sweden" value="Sweden">
+                <label for="sweden">Sweden </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="serbia" value="Serbia">
+                <label for="serbia">Serbia </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="cyprus" value="Cyprus">
+                <label for="cyprus">Cyprus </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="israel" value="Israel">
+                <label for="israel">Israel </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="norway" value="Norway">
+                <label for="norway">Norway </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="belgium" value="Belgium">
+                <label for="belgium">Belgium </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="azerbaijan" value="Azerbaijan">
+                <label for="azerbaijan">Azerbaijan </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="albania" value="Albania">
+                <label for="albania">Albania </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="sanmarino" value="Sanmarino">
+                <label for="sanmarino">San Marino </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="netherlands" value="Netherlands">
+                <label for="netherlands">Netherlands </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="spain" value="Spain">
+                <label for="spain">Spain </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="germany" value="Germany">
+                <label for="germany">Germany </label>
+            </p>
+            <p>
+                <input type="radio" name="os" id="unitedkingdom" value="Unitedkingdom">
+                <label for="unitedkingdom">United Kingdom </label>
+            </p>
+            <input type="submit" value="Vote" class="btn"> 
+        </form>
+        <br><br>
+        <div id="chartContainer" style="height: 300px; width:100%;"></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha512-5SUkiwmm+0AiJEaCiS5nu/ZKPodeuInbQ7CiSrSnUHe11dJpQ8o4J1DU/rw4gxk/O+WBpGYAZbb8e17CDEoESw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" integrity="sha512-IcKq5DomZY4Gw+wmbDALeSPnNPYEwcv3dXdolW2TEoUVXQoCvj22GGilLfpZroglJgldOK8DAGcwNDsrtvv0zA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pusher/4.2.2/pusher.min.js" integrity="sha512-7nHbt5cy+tSgAa8M8C2c1/WNX5s+9KQl3Ps9WZ1bCchLAUVSbg8nPPEeOojwIWOEWLZUfX0qXgB/wWeAwh2MUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
